@@ -12,11 +12,11 @@ class CalculatorPage extends StatefulWidget {
 class _CalculatorPageState extends State<CalculatorPage> {
   String equation = '0';
   final List<String> buttons = [
-    '1', '2', '3', '4',
-    '5', '6', '7', '8',
-    '9', '0', '.', '=',
-    '+', '-', '*', '/',
-    'C'
+    'C', '.', '=', '+',
+    '1', '2', '3', '-',
+    '4', '5', '6', '*',
+    '7', '8', '9', '/',
+    '0'
   ];
 
   void onButtonPressed(String value) {

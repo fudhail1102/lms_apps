@@ -12,7 +12,7 @@ class _CurrencyConverterPageState extends State<CurrencyConverterPage> {
   final TextEditingController controller1 = TextEditingController();
 
   void convert(){
-    final double  usd = double.tryParse(controller1.text) ?? 0;
+    final double usd = double.tryParse(controller1.text) ?? 0;
     setState(() {
       value = usd*83;
     });

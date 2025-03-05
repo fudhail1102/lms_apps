@@ -6,6 +6,7 @@ class FactorialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Factorial Checker',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

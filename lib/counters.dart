@@ -6,14 +6,13 @@ class CountersApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        body: BaseCounter(),
-      ),
+      home: BaseCounter()
     );
   }
 }
@@ -56,7 +55,7 @@ class _BaseCounterState extends State<BaseCounter> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             Text(
               'Counter Value ($_base): ${_getCounterValue()}',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -64,7 +63,7 @@ class _BaseCounterState extends State<BaseCounter> {
             SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: [
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
