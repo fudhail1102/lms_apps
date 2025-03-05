@@ -7,19 +7,18 @@ class TodoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Todo Manager',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TodoList(title: 'Todo Manager'),
+      home: const TodoList()
     );
   }
 }
 
 class TodoList extends StatefulWidget {
-  const TodoList({super.key, required this.title});
-
-  final String title;
+  const TodoList({super.key});
 
   @override
   State<TodoList> createState() => _TodoListState();
@@ -30,10 +29,10 @@ class _TodoListState extends State<TodoList> {
   final TextEditingController _textFieldController = TextEditingController();
 
   void _addTodoItem(String name) {
+    _textFieldController.clear();
     setState(() {
       _todos.add(Todo(name: name, completed: false));
     });
-    _textFieldController.clear();
   }
 
   void _handleTodoChange(Todo todo) {
@@ -52,7 +51,7 @@ class _TodoListState extends State<TodoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Todo Manager'),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8.0),

@@ -8,6 +8,7 @@ class FetchApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'HTTP Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,

@@ -20,5 +20,5 @@ List<StatelessWidget> apps = [
   ];
 
 void main() {
-  runApp(const MyCalculatorApp());
+  runApp(const TodoApp());
 }
